@@ -43,7 +43,7 @@ public class EmployeeRestController {
     DirectorsCounterCache directorsCounterCache;
 
     @ResponseStatus(HttpStatus.OK)
-    @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/{id}"/*, produces = MediaType.APPLICATION_JSON_VALUE*/)
     public EmployeeTo findById(@PathVariable Long id) {
         try {
             return employeeService.findById(id);
